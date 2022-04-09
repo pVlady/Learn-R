@@ -1,3 +1,7 @@
+library(pivottabler)
+# quick pivot table:  qhpvt(dataFrame, rows, columns, calculations, ...)
+qhpvt(bhmtrains, "row_name", "col_name", "n()")
+
 # Create pivot table
 library(pivottabler)
 pt <- PivotTable$new()
