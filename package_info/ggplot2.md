@@ -59,6 +59,7 @@ df %>%
 
 #### Виды диаграмм
 ``` r
+geom_bar(stat="identity"|"count", position=position_dodge(), colour="black") 
 geom_line(size = 0.1)
 geom_point(size = 1)
 geom_col()
