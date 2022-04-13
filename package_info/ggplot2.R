@@ -31,9 +31,8 @@ library(dplyr)
 df <- data.frame(iris %>%
 		     group_by(Species) %>%
                      summarise(Mean_Sepal.Length = round(mean(Sepal.Length), digits=2)))
-ggplot(data = df2, aes(x = Species,
-                       y = Mean_Sepal.Length)) +
-  geom_bar(stat = "identity",
+ggplot(data = df2, aes(x = Species, y = Mean_Sepal.Length)) +
+  geom_bar(stat = "identity",     # "stat = "count" для подсчета числа наблюдений
            fill="steelblue") + 
   guides(fill = FALSE) + 
   xlab("Species") +
