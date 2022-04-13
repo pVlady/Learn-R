@@ -60,7 +60,10 @@ df %>%
 #### Виды диаграмм
 ``` r
 geom_bar(stat="identity"|"count", position=position_dodge(), colour="black") 
-geom_line(size = 0.1)
+geom_line(size = 0.1) + 
+  expand_limits(y=0) +                       # set y range to include 0
+  scale_colour_hue(name="Sex of payer",      # set legend title
+                   l=30)  +  ...             # use darker colors (lightness=30)
 geom_point(size = 1)
 geom_col()
 geom_histogram()
