@@ -150,3 +150,7 @@ theme_custom_blue <-
 # применяем созданную тему
 plot + theme_custom_blue
 ```
+
+## References
+[ggplot2 - Essentials | Примеры диаграмм](http://www.sthda.com/english/wiki/ggplot2-essentials)
+
