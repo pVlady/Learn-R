@@ -44,5 +44,6 @@ invoke_map(funcs, .x, ...)
 ...
 ```
  ## References
+ [purrr | tidyverse](https://purrr.tidyverse.org/)  
  [Jenny Bryan's purrr tutorial](https://jennybc.github.io/purrr-tutorial/)
  
