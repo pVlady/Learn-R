@@ -1,5 +1,25 @@
 # Визуализация данных с помощью библиотеки ggplot2
 ## Случаи использования разных типов диаграмм
+* *Barplot* используется для представления дискретной переменной. Принимает в качестве аргумента таблицу сопряженности.
+```r 
+par(mfrow = c(1, 2))                                                                    ; две диаграммы в строке
+my_table <- table(mtcars$cyl)
+barplot(my_table, main = "Absolute frequency", col = rainbow(3), ylim = с(0, 2))        ; absolute frequency barplot
+barplot(prop.table(my_table) * 100, main = "Relative frequency (%)", col = rainbow(3))  ; relative frequency bar plot (%)
+par(mfrow = c(1, 1))                                                                    ; вернуть установки по умолчанию
+plot(factor(mtcars$cyl), col = rainbow(3))                                              ; barplot можно построимть и ток
+grid(nx = NA, ny = NULL, lwd = 1, lty = 1, col = "gray")                                ; добавление горизонтальной сетки
+``` 
+Аргументы функции `barplot()`:
+```r
+barplot(my_table,                               # таблица сопряженности
+        main = "Customized bar plot",           # заголовок диаграммы
+        xlab = "Number of cylinders",           # подпись оси X
+        ylab = "Frequency",                     # подпись оси Y
+        border = "black",                       # цвет границы столбиков диаграммы
+        col = c("darkgrey", "darkblue", "red")) # цвет заполнения столбиков диаграммы
+```
+
 * *Гистограмма* используется для отображения непрерывной числовой переменной. По сути это *barplot*, построенный на результатах факторизации числовой переменной разбиением ее области значений на интервалы. Выводится либо частотность заполнения интервалов, либо количество наблюдений в каждом из них.
 
 
