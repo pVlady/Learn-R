@@ -22,7 +22,7 @@ tibble(..., .rows = NULL, .name_repair = c("check_unique", "unique", "universal"
 * `unique` — имя должно быть уникальное и не пустое
 * `check_unique` — имя должно быть уникальное
 * `universal` — делает имена уникальными и синтетическими
-* 
+ 
 #### Функция `tibble_row()`
 ```r
 tibble_row(..., .name_repair = c("check_unique", "unique", "universal", "minimal") )
@@ -114,8 +114,6 @@ enframe(x, name = "name",   ; преобразует именованные ат
            value = "value") ;   (для списка результатом будет вложенный tibble со столбцом типа list)
 deframe(x)                  ; преобразует фрейм из двух столбцов в именованный вектор или список (первый столбец — имена, второй -  значения)
 ```
-
-
 
 ## References
 [О tibble](https://bestpractices.netlify.app/r_language/tidyverse/tibble_tidyverse)  
