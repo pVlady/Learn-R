@@ -48,14 +48,17 @@ mlp <- nn_sequential(
 
 ### Модели с непоследовательным распространением сигнала
 Для построения пользовательской модели используется конструктор `nn_module()`.  
-При этом для модели необходимо определить две функции: `initialize()` и `forward()`.
+При этом для модели необходимо определить две функции:
+* `initialize()` – создает внутренние поля модели
+* `forward()` – определяет, что должна делать модель при вызове ее на входных данных.
 ```r
 my_linear_model <- nn_module(
   initialize = function(in_features, out_features) {
-    self$w <- nn_parameter(torch_randn(in_features, out_features))
+    self$w <- nn_parameter(torch_randn(in_features, out_features))  ; входной тензор 
     self$b <- nn_parameter(torch_zeros(out_features))
   },
   forward = function(input) { input$mm(self$w) + self$b }
 )
 ```
+Для определения внутренних переменных в модели выше использовалась функция `nn_parameter()`, которая гарантирует расчет градиентов для входного тензора.  
 Чтобы создать экземпляр модели, нужно вызвать его как конструктор: `my_model <- my_linear_model(7, 1)`.
