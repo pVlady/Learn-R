@@ -40,3 +40,23 @@ for (i in 1:num_iterations) {
   })
 }
 ```
+
+#### Пример c использованием оптимизатора `optim_lbfgs()`
+```r
+iter_count <- 10
+x <- torch_tensor(c(-1, 1), requires_grad = TRUE)
+optimizer <- optim_lbfgs(x, line_search_fn = "strong_wolfe")
+
+calc_loss <- function() {
+  optimizer$zero_grad()
+  value <- rosenbrock(x)
+  cat("Value is: ", as.numeric(value), "\n")
+  value$backward()
+  value
+}
+
+for (i in 1:iter_count) {
+  cat("\nIteration: ", i, "\n")
+  optimizer$step(calc_loss)
+}
+```
