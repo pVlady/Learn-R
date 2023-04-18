@@ -105,7 +105,7 @@ df %>%
 ### Функция ggplot  
 ``` r
   ggplot( aes(x = month, y = transactions) ) +    ; основной слой
-    geom_col( aes( fill = transactions ),         ; слой столбцатой диаграммы
+    geom_col( aes( fill = transactions ),         ; слой столбчатой диаграммы
               show.legend = FALSE) +
     labs(title = "Количество продаж за 2019 год", ; заголовок
          subtitle = "по месяцам")  +              ; подзаголовок
