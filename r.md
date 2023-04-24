@@ -5,4 +5,5 @@
 * 
 
 ## References
-[TOP 100 R TUTORIALS : STEP BY STEP GUIDE](https://www.listendata.com/p/r-programming-tutorials.html)
+* [TOP 100 R TUTORIALS : STEP BY STEP GUIDE](https://www.listendata.com/p/r-programming-tutorials.html)
+* [List of R Commands & Functions](https://statisticsglobe.com/r-functions-list/)
