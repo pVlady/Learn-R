@@ -28,7 +28,7 @@
 
 ### Data Science & ML
 * [Data Science Live Book | Pablo Casas](https://livebook.datascienceheroes.com/)
-* [Deep Learning and Scientific Computing with R torch](https://skeydan.github.io/Deep-Learning-and-Scientific-Computing-with-R-torch/)
+* [Deep Learning and Scientific Computing with R torch | Sigrid Keydana](https://skeydan.github.io/Deep-Learning-and-Scientific-Computing-with-R-torch/)
 
 ### R & Git
 * [Happy Git and GitHub for the useR | Jennifer Bryan](https://happygitwithr.com/index.html)
