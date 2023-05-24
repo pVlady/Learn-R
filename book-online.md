@@ -27,6 +27,7 @@
 * [Анализ временных рядов с помощью R | Сергей Мастицкий](https://ranalytics.github.io/tsa-with-r/)
 
 ### Data Science & ML
+* [An Introduction to Machine Learning with R | Laurent Gatto](https://lgatto.github.io/IntroMachineLearningWithR/index.html)
 * [Data Science Live Book | Pablo Casas](https://livebook.datascienceheroes.com/)
 * [Deep Learning and Scientific Computing with R torch | Sigrid Keydana](https://skeydan.github.io/Deep-Learning-and-Scientific-Computing-with-R-torch/)
 
