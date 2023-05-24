@@ -23,6 +23,7 @@
 * [Анализ данных и статистика в R | Иван Поздняков](https://pozdniakov.github.io/tidy_stats/)
 
 ### Временные ряды
+* [Forecasting — Principes & Practice | Rob J. Hyndman & George Athanasopoulos](https://www.otexts.org/book/fpp)
 * [Анализ временных рядов с помощью R | Сергей Мастицкий](https://ranalytics.github.io/tsa-with-r/)
 
 ### Data Science & ML
