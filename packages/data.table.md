@@ -1,4 +1,4 @@
-# package: data.table
+# data.table
 
 ### Общие функции
 ```r
@@ -32,7 +32,7 @@ setkey(dt, x)
 dt[c("JFK", "LGA")]
 ;
 setkey(dt, x, y)
-dt[.("JFK", "MIA")]
+dt[.("JFK", "MIA")]7
 ```
 
 ### Выборка столбцов
@@ -87,8 +87,27 @@ merge(dt1, dt2, by = "x")                ; INNER JOIN        ; dt1[dt2, nomatch 
 merge(dt1, dt2, by = "x", all.x = TRUE)  ; LEFT JOIN         ; dt2[dt1]
 merge(dt1, dt2, by = "x", all.y = TRUE)  ; RIGHT JOIN        ; dt1[dt2]
 merge(dt1, dt2, all = TRUE)              ; FULL OUTER JOIN   ; dt1[dt2, nomatch = NA]
+
+dt[x, on="id"]               ; right join    : SELECT DT RIGHT JOIN X (одноименные столбцы x переименовываются с добавлением `i.`)
+x[dt, on="id"]               ; left join     : SELECT X RIGHT JOIN DT ON DT$id != X$id
+dt[x, on="id", nomatch = 0]  ; inner join    : SELECT DT INNER JOIN X ON DT$id != X$id
+dt[!x, on="id"]              ; not join      : SELECT DT LEFT JOIN X ON DT$x != X$x
+dt[x, on=.(id <= foo)]       ; non-equi join : SELECT DT RIGHT JOIN X ON DT$id <= X$foo
+dt[x, on = "y <= foo"]       ; same as above
+dt[x, on = c("y <= foo")]    ; same as above
+dt[x, .(id, v, i.id, i.foo), ; указать, какие столбцы нужно вернуть
+      on=.(id, y >= foo)]
+dt[x, on=.(id, y <= foo)]    ; non-equi join : SELECT DT RIGHT JOIN X ON DT$id = X$id AND DT$y <= x$foo
+dt[x, on=.(x, v >= v),       ; non-equi join with by=.EACHI
+      sum(y) * foo,
+      by = .EACHI]
 ```
-* При соединении таблиц аргумент `nomatch = NA` осуществит *outer join*, аргумент `nomatch = NULL` — *inner join*, аргумент `mult = "first"|"last"` выберет из каждой группы первую|последнюю запись.
+* При соединении таблиц в синтаксисе dt[x, on='id'] дополнительный аргумент:
+  * `nomatch = NA`          реализует *outer join*
+  * `nomatch = NULL`        реализует *inner join*
+  * `mult = "first"|"last"` выберет из каждой группы первую|последнюю запись
+  
+[How to do joins with data.table](https://gist.github.com/nacnudus/ef3b22b79164bbf9c0ebafbf558f22a0)
 
 ## Дополнительные замечания
 * Синтаксис `dt[ ][ ][ ]` позволяет строить последовательные подзапросы для получения данных.
@@ -121,6 +140,7 @@ dt[, .(mean_x = mean(x, na.rm = TRUE)), by = month][order(-mean_x)][1:3]
 ```
 
 ## References
+* [Enhanced data.frame](https://rdatatable.gitlab.io/data.table/reference/data.table.html)
 * [data.table | Documentation on GitHub](https://github.com/Rdatatable/data.table/wiki)
 * [R – Data.Table Rolling Joins](https://www.gormanalysis.com/blog/r-data-table-rolling-joins/)
 * [Data manipulations | Филипп Управителев](https://webinars.rintro.ru/data-manipulations.html#dt1dt2-merge)
