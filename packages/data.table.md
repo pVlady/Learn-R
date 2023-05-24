@@ -7,9 +7,21 @@ ncol(dt)     ; число столбцов в таблице
 names(dt)    ; названия столбцов таблицы
 setDT(df)    ; inplace-преобразование датафрейма в объект data.table
 ```
-
-### Дополнительншые аргументы в операторе `[`
-Кроме `i`, `j`, `by` в выражении `dt[i, j, by]` могут использоваться и другие параметры:
+### Параметры по умолчанию оператора `[`
+```r
+[(dt, i, j, by, keyby,
+  with = TRUE,
+  nomatch = NA,
+  mult = "all",
+  roll = FALSE,
+  rollends = if (roll == "nearest") c(TRUE, TRUE) else if (roll >= 0) c(FALSE, TRUE) else c(TRUE, FALSE),
+  which = FALSE,
+  .SDcols,
+  verbose = getOption("datatable.verbose"),                   ; default: FALSE
+  allow.cartesian = getOption("datatable.allow.cartesian"),   ; default: FALSE
+  drop = NULL, on = NULL, env = NULL)
+```
+Кроме `i`, `j`, `by` в выражении `dt[i, j, by]` могут использоваться:
 * `with`, `which` — `with = FALSE` использовать синтаксис *data.frame* при обращении к *data.,table*
 * `allow.cartesian`
 * `roll`, `rollends` — для скользящих соединений таблиц
