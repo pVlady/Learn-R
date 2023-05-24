@@ -141,6 +141,7 @@ dt[, .(mean_x = mean(x, na.rm = TRUE)), by = month][order(-mean_x)][1:3]
 
 ## References
 * [Enhanced data.frame](https://rdatatable.gitlab.io/data.table/reference/data.table.html)
+* [Frequently Asked Questions about data.table](https://cran.r-project.org/web/packages/data.table/vignettes/datatable-faq.html#why-does-xy-return-all-the-columns-from-y-too-shouldnt-it-return-a-subset-of-x)
 * [data.table | Documentation on GitHub](https://github.com/Rdatatable/data.table/wiki)
 * [R – Data.Table Rolling Joins](https://www.gormanalysis.com/blog/r-data-table-rolling-joins/)
 * [Data manipulations | Филипп Управителев](https://webinars.rintro.ru/data-manipulations.html#dt1dt2-merge)
