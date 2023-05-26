@@ -1,4 +1,4 @@
-# utile.logger
+# futile.logger
 Пакет для логгирования событий. События могут иметь один из уровней: TRACE, DEBUG, INFO, WARN, ERROR, FATAL.
 ```r
 library(futile.logger)
@@ -25,7 +25,7 @@ flog.appender(appender.fn, name='test.logger')     ; присоединить ap
 flog.layout(layout.fn)                             ; присоединить layout к корневому логгеру
 flog.layout(layout.fn, name='test.logger')         ; присоединить layout к логгеру test.logger
 ```
-Если какой-либо внешний пакет использует для вывода сообщений *utile.logger*, можно установить уровень выводимых этим пакетом сообщений:
+Если какой-либо внешний пакет использует для вывода сообщений *futile.logger*, можно установить уровень выводимых этим пакетом сообщений:
 ```r
 flog.threshold(WARN, name = 'tawny')    ; установка уровня сообщений для пакета tawny
 ```
