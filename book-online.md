@@ -13,6 +13,7 @@
 * [R Packages | Hadley Wickham](https://r-pkgs.org/index.html)
 * [R Tutorial | Kelly Black](https://www.cyclismo.org/tutorial/R/index.html)
 * [What They Forgot to Teach You About R | Jennifer Bryan](https://rstats.wtf/)
+* [Data Science «спецназ» собственными силами | Илья Шутов –погружение в R](Data Science «спецназ» собственными силами)
 
 ### RMarkdown & Quarto
 * [R Markdown: The Definitive Guide | Yihui Xie](https://bookdown.org/yihui/rmarkdown/)
