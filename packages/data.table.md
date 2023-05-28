@@ -59,6 +59,7 @@ data.table(...,                      ; как в data.frame
   * комбинацией указвнных выше случаев, если в соединении имеются как общие, так и различные столбцы: `dt[i, on = c("a", V2 = "b")]`.
   * списком `dt[i, on = .(a, b)]`.
   * выражением вида `dt[i, on = c("x >= a", "y <= b")]`, либо for interactive `dt[i, on = .(x >= a, y <= b)]` для non-equal join.
+* Аргумент `env` определяет list or an environment, passed to substitute2 for substitution of parameters in i, j and by (or keyby). Use verbose to preview constructed expressions.
 
 ### Общие функции
 ```r
