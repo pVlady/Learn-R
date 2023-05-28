@@ -1,4 +1,33 @@
 # data.table
+### Значения аргументов по умолчанию для функций `data.table()` и `[]`
+```r
+data.table(...,                      ; как в data.frame
+           keep.rownames = FALSE,    ; если TRUE и ... являются матрицей или data.frame, имена строк сохраняются в столбце rn
+           check.names = FALSE,      ; как в data.frame
+           key = NULL,               ; может быть представлен строкой вида "x,y,x" или вектором c("x","y","z")
+           stringsAsFactors = FALSE) ; как в data.frame, но по умолчанию равен FALSE
+
+# S3 method for data.table
+[(x,                        ; x - data.table
+  i,                        ; integer, logical or character vector; single column numeric matrix; expression of column names; list; data.frame or data.table; имя переменной                   
+  j,
+  by, keyby,                
+  with = TRUE,              ; если FALSE, то синтаксис трактуется как синтаксис data.frame
+  nomatch = NA,
+  mult = "all",
+  roll = FALSE,
+  rollends = if (roll=="nearest") c(TRUE,TRUE)
+             else if (roll>=0) c(FALSE,TRUE)
+             else c(TRUE,FALSE),
+  which = FALSE,
+  .SDcols,
+  verbose = getOption("datatable.verbose"),                   # default: FALSE
+  allow.cartesian = getOption("datatable.allow.cartesian"),   # default: FALSE
+  drop = NULL, on = NULL, env = NULL)
+```
+* Если в 'i' встречается значение 'NA', то оно трактуется как FALSE (в отличие от data.frame) 
+*  В `i` аргументы типа _character_, _list_ and _data.frame_ преобразуются в _data.table_. В этом случае для соединения таблиц должен быть указан аргумент `on` (рекомендуется указывать всегда), либо в таблице `x` должен быть определен ключ. При наличии ключа в таблице 'i', соединение производится по совпадению ключей. В противном случае используется совпадение _первого столбца ключа_ таблицы `x` _с первым столбцом_ 'i', вторго -- со вторым и т.д.
+* Если в `i` указано имя переменной, определенной в области видимости, то ее значения не рассматриваются как названия столбцов, и она не преобразуется в data.table, а использется как есть.
 
 ### Общие функции
 ```r
