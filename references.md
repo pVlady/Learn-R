@@ -3,6 +3,7 @@
 ## Packages
 
 * [reprex](https://reprex.tidyverse.org/index.html)
+* [marginaleffects](https://vincentarelbundock.github.io/marginaleffects/)
 
 ## Статьи и тематические сайты
 ### data.table
