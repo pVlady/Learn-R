@@ -1,7 +1,6 @@
 # R References
 
 ## Packages
-
 * [reprex](https://reprex.tidyverse.org/index.html)
 * [marginaleffects](https://vincentarelbundock.github.io/marginaleffects/)
 
@@ -16,3 +15,9 @@
 
 ### reprex
 * [reprex: Как задать хороший вопрос в R чате?](https://ubogoeva.github.io/R_question_how_to_ask.html)
+
+## Forecasting
+* [Forecasting: Principles and Practice | R.Hyndman & G.Athanasopoulos](https://otexts.com/fpp3/)
+* [feasts](https://feasts.tidyverts.org/) — provides a collection of tools for the analysis of time series data
+* [fable](https://fable.tidyverts.org/) —  a collection of commonly used time series forecasting models. [fable on GitHub](https://github.com/tidyverts/fable)
+* [Questions tagged [forecasting] | CrossValidated](https://stats.stackexchange.com/tags/forecasting) — ответы на вопросы по прогнозированию временных рядов
