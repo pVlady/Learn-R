@@ -2,7 +2,7 @@
 
 ## Packages
 * [reprex](https://reprex.tidyverse.org/index.html)
-* [marginaleffects](https://vincentarelbundock.github.io/marginaleffects/)
+* [marginaleffects](https://vincentarelbundock.github.io/marginaleffects/) — allows to compute and plot predictions, slopes, marginal means, and comparisons (contrasts, risk ratios, odds, lift, etc.) for over 80 classes of statistical models. 
 
 ## Статьи и тематические сайты
 ### data.table
