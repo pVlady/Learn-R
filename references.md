@@ -1,4 +1,6 @@
 # R References
+## Basics
+* [List of R Commands & Functions](https://statisticsglobe.com/r-functions-list/)
 
 ## Packages
 * [reprex](https://reprex.tidyverse.org/index.html)
