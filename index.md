@@ -40,6 +40,13 @@
 ### Логгирование
 [utile.logger](packages/utile.logger.md)
 
+### Torch
+[Установка torch](packages/torch/01_torch_setup.md)\
+[Тензоры](packages/torch/02_tensors.md)\
+[Autograd](packages/torch/03_autograd.md)\
+[Пример простой нейросети](packages/torch/04_simple_network.md)\
+[Модули](packages/torch/05_modules.md)\
+[Функции потерь](packages/torch/06_losses.md)
 
 ## Practice
 [Snippets](practice/snippets.md)\
