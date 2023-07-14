@@ -4,10 +4,10 @@
 [Обновление версии R](r-update.md)
 
 ## Базовый R
-[base](packages/base.md)\
-[environment](base/environment.md)\
-[data.frame](base/data.frame.md)\
-[Работа с файлами](base/files.md)
+[Environment](base/environment.md)\
+[Базовые функции](packages/base.md)\
+[Базовый тип data.frame](base/data.frame.md)\
+[Работа с файлами и директориями](base/files.md)
 
 ## Packages
 ### Работа с данными
