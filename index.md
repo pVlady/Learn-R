@@ -15,12 +15,13 @@
 [pivottabler](packages/pivottabler.R)\
 [slider](packages/slider.md)
 
-#### tidyverse
+#### Инфраструктура _tidyverse_
 [dplyr](packages/dplyr_1.0.0.R)\
 [purrr](packages/purrr.md)\
 [readr](packages/read_data.md)\
 [tibble](packages/tibble.md)
 
+### Временные ряды
 [feasts](packages/feasts.md)
 
 ### Работа с Excel
