@@ -9,7 +9,7 @@
 [Базовый тип data.frame](base/data.frame.md)\
 [Работа с файлами и директориями](base/files.md)
 
-## Packages
+## Пакеты R
 ### Работа с данными
 [data.table](packages/data.table.md)\
 [pivottabler](packages/pivottabler.R)\
@@ -40,7 +40,7 @@
 ### Логгирование
 [utile.logger](packages/utile.logger.md)
 
-### Torch
+## Нейронные сети: Torch
 [Установка torch](packages/torch/01_torch_setup.md)\
 [Тензоры](packages/torch/02_tensors.md)\
 [Автоматическое дифференцирование (autograd)](packages/torch/03_autograd.md)\
