@@ -43,9 +43,9 @@
 ### Torch
 [Установка torch](packages/torch/01_torch_setup.md)\
 [Тензоры](packages/torch/02_tensors.md)\
-[Autograd](packages/torch/03_autograd.md)\
-[Пример простой нейросети](packages/torch/04_simple_network.md)\
-[Модули](packages/torch/05_modules.md)\
+[Автоматическое дифференцирование (autograd)](packages/torch/03_autograd.md)\
+[Простая двуслойная сеть](packages/torch/04_simple_network.md)\
+[Модули (слои) и модели для построения нейронных сетей](packages/torch/05_modules.md)\
 [Функции потерь](packages/torch/06_losses.md)
 
 ## Practice
