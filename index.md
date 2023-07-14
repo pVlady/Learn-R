@@ -12,13 +12,13 @@
 ## Packages
 ### Работа с данными
 [data.table](packages/data.table.md)\
-[pivottabler](packages/pivottabler.md)\
-[slider](packages/slider.ms)
+[pivottabler](packages/pivottabler.R)\
+[slider](packages/slider.md)
 
 #### tidyverse
 [dplyr](packages/dplyr_1.0.0.R)\
 [purrr](packages/purrr.md)\
-[readr](read_data.md)\
+[readr](packages/read_data.md)\
 [tibble](packages/tibble.md)
 
 [feasts](packages/feasts.md)
@@ -42,8 +42,8 @@
 
 
 ## Practice
-{Snippets}(practice/snippets.md)\
-[Работа со строками](practice/Работа со строками.md)\
+[Snippets](practice/snippets.md)\
+[Работа со строками](practice/Работа_со_строками.md)\
 [Скользящие соединения](practice/rolling_joins.md)
 
 
