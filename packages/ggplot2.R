@@ -62,7 +62,9 @@ ggplot(iris, aes(x = Species,
         axis.title = element_text(size = 14, face = "bold"))  # шрифт для подписей осей
 
 #------------------------------------------------------------------------------
-# Line Plot: горизонтальная, вертикальная линии и прямая y = ax + b
+# Line Plot: горизонтальная, вертикальная линии, прямая y = ax + b и лин. регрессия, отрезки.
+# Аргументу xintersept можно присвоить вектор, тогда будет несколько вертикальных линий
+№ https://ggplot2.tidyverse.org/reference/geom_abline.html
 #------------------------------------------------------------------------------
 ggplot(...) +
 # горизонтальная линия
@@ -71,7 +73,10 @@ ggplot(...) +
   geom_vline(xintercept = 3, linetype="dotted", color = "blue", size=1.5) +
 # прямая
   geom_abline(intercept = 37, slope = -5, color="red", linetype="dashed", size=1.5) +
+# прямая линейной регрессии (по умолчанию используется формула y ~ x)
+  geom_smooth(method = "lm", se = FALSE) +
 # отрезок (вертикальный)
-geom_segment(aes(x = 4, y = 15, xend = 4, yend = 27)) + 
+  geom_segment(aes(x = 4, y = 15, xend = 4, yend = 27)) + 
 # стрелка
-geom_segment(aes(x = 5, y = 30, xend = 3.5, yend = 25), arrow = arrow(length = unit(0.5, "cm")))
+  geom_segment(aes(x = 5, y = 30, xend = 3.5, yend = 25), arrow = arrow(length = unit(0.5, "cm")))
+
