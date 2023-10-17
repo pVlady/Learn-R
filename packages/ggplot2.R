@@ -60,3 +60,15 @@ ggplot(iris, aes(x = Species,
   theme_classic() + 
   theme(axis.text = element_text(size = 12, face = "bold"),   # шрифт для меток осей
         axis.title = element_text(size = 14, face = "bold"))  # шрифт для подписей осей
+
+#------------------------------------------------------------------------------
+# Line Plot: горизонтальная, вертикальная линии и прямая y = ax + b
+#------------------------------------------------------------------------------
+ggplot(...) +
+# горизонтальная линия
+  geom_hline(yintercept=20, linetype="dashed", color = "red", size = 1.0) +
+# вертикальная линия
+  geom_vline(xintercept = 3, linetype="dotted", color = "blue", size=1.5) +
+# прямая
+  geom_abline(intercept = 37, slope = -5, color="red", linetype="dashed", size=1.5)
+
