@@ -70,5 +70,8 @@ ggplot(...) +
 # вертикальная линия
   geom_vline(xintercept = 3, linetype="dotted", color = "blue", size=1.5) +
 # прямая
-  geom_abline(intercept = 37, slope = -5, color="red", linetype="dashed", size=1.5)
-
+  geom_abline(intercept = 37, slope = -5, color="red", linetype="dashed", size=1.5) +
+# отрезок (вертикальный)
+geom_segment(aes(x = 4, y = 15, xend = 4, yend = 27)) + 
+# стрелка
+geom_segment(aes(x = 5, y = 30, xend = 3.5, yend = 25), arrow = arrow(length = unit(0.5, "cm")))
