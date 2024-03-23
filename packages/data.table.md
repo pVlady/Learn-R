@@ -2,7 +2,7 @@
 ### Значения аргументов по умолчанию для функций `data.table()` и `[]`
 ```r
 data.table(...,                      ; как в data.frame
-           keep.rownames = FALSE,    ; если TRUE и ... являются матрицей или data.frame, имена строк сохраняются в столбце rn
+           keep.rownames = FALSE,    ; если TRUE и ... являются матрицей или data.frame, имена строк сохраняются в столбце
            check.names = FALSE,      ; как в data.frame
            key = NULL,               ; может быть представлен строкой вида "x,y,x" или вектором c("x","y","z")
            stringsAsFactors = FALSE) ; как в data.frame, но по умолчанию равен FALSE
