@@ -1,4 +1,39 @@
 # Визуализация данных с помощью библиотеки ggplot2
+## Специальные приемы работы
+[ggplot2 tricks | GitHub](https://github.com/teunbrand/ggplot_tricks)
+
+#### Установка параметров темы для документа
+```r
+library(ggplot2)
+library(scales)
+
+theme_set(  
+  theme_gray() +       ; определяем базовую тему
+  theme(               ; добавляем необъодимые элементы
+    axis.line        = element_line(),
+    panel.background = element_rect(fill = "white"),
+    panel.grid.major = element_line("grey95", linewidth = 0.25),
+    legend.key       = element_rect(fill = NA) 
+  )
+)
+```
+#### Формирование частичной эстетики с последующей донастройкой
+```r
+my_mapping <- aes(x = foo, y = bar)   ; выносим сюда общие настройки
+aes(colour = qux, !!!my_mapping)      ; стилизуем недостающие элементы
+```
+#### Использование контура обводки для точек
+```r
+my_fill <- aes(fill = after_scale(alpha(colour, 0.3)))
+ggplot(mpg, aes(displ, hwy)) +
+  geom_point(aes(colour = factor(cyl), !!!my_fill), shape = 21)
+```
+#### Смещение подписей, чтобы не наползали на точки
+```r
++ geom_text(nudge_x = 1, nudge_y = 1)
+```
+
+
 ## Случаи использования разных типов диаграмм
 ### Barplot
 [*Примеры*](https://r-coder.com/barplot-r/#Space_between_groups)  
