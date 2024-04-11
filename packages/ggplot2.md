@@ -1,6 +1,7 @@
 # Визуализация данных с помощью библиотеки ggplot2
 ## Специальные приемы работы
-[ggplot2 tricks | GitHub](https://github.com/teunbrand/ggplot_tricks)
+[ggplot2 tricks | GitHub](https://github.com/teunbrand/ggplot_tricks)\
+[Коллекция хитростей ggplot2 | Embeded graphs, ...](https://lpembleton.rbind.io/ramblings/R/)
 
 #### Установка параметров темы для документа
 ```r
